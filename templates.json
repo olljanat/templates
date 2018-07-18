@@ -837,15 +837,15 @@
   },
   {
     "type": "container",
-    "title": "Træfik 1.5",
+    "title": "Træfik",
     "description":
       "Træfik (pronounced like traffic) is a modern HTTP reverse proxy and load balancer made to deploy microservices with ease. It supports several backends (Docker, Swarm mode, Kubernetes, Marathon, Consul, Etcd, Rancher, Amazon ECS, and a lot more) to manage its configuration automatically and dynamically.",
     "note": "<a href=\"http://docs.traefik.io/\">Træfik documentation</a>",
     "platform": "linux",
     "categories": ["reverse proxy"],
     "logo":
-      "https://d33wubrfki0l68.cloudfront.net/e29410f43273a18d40e1bd6e41641f5afdfc8057/eb7ca/traefik.logo.png",
-    "image": "traefik:1.5-alpine",
+    "https://docs.traefik.io/img/traefik.logo.png",
+    "image": "traefik:alpine",
     "command":
       "/bin/sh -c '/usr/local/bin/traefik --docker --docker.domain=${TRAEFIK_BASE_DOMAIN:-docker.localhost} --docker.exposedByDefault=true --entrypoints=\"Name:http Address::${TRAEFIK_PORT_HTTP:-80}\" --entrypoints='Name:https Address::${TRAEFIK_PORT_HTTPS:-443} TLS' --entrypoints='Name:traefik Address::${TRAEFIK_PORT_DASHBOARD:-8080}' --logLevel=WARN --ping --api --api.statistics.recenterrors=20 ",
     "network": "host",
